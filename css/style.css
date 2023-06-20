@@ -9,14 +9,13 @@
 html{ 
     font-size: 62.5%;
     box-sizing: border-box;         /*1° primero paso box-model*/
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;/* se puede utilizar mandatory */
 }
 /*Scroll snap*/
-.servicios,
-/* .navegacion-principal{
+.servicios, .navegacion-principal, .formulario{
     scroll-snap-align: center;
     scroll-snap-stop: always;
-} */
+}
 
 *, *::before, *::after{         /*2°paso se utiliza junto box-sizing en html para integrar el box model*/
     box-sizing: inherit;       /*3° paso pára utilizar el box-model*/
@@ -54,6 +53,7 @@ h1,h2,h3{
     margin: 0 auto;
 }
 
+
 .boton{
     background-color: var(--secundario);
     color: var(--blanco);
@@ -70,9 +70,10 @@ h1,h2,h3{
 }
 @media(min-width:768px){
     .boton{
-        width: auto; /*resetea al la medida original*/
+        width: auto; 
     }
-}
+}/*resetea al la medida original*/
+
 .boton:hover{
     cursor: pointer;/*Coloca la manito en el boton de enviar*/
 }
@@ -166,7 +167,7 @@ h1,h2,h3{
     align-items: center;
 }
 
-.servicio h3{
+.servicio h3{ 
     color: var(--secundario);
     font-weight: normal; 
 }
